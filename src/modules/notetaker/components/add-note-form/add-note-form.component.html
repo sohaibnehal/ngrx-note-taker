@@ -1,0 +1,20 @@
+<div class="text-center mt-5">
+  <form [formGroup]="addnoteform" (ngSubmit)="onAddNoteForm()">
+    <div class="form-group">
+      <input
+        type="text"
+        id="note"
+        formControlName="note"
+        class="form-control"
+        [class.is-invalid]="
+          addnoteform.controls.note.dirty && addnoteform.controls.note.errors
+        "
+        placeholder="Enter note.."
+        required=""
+        autofocus=""
+        autocomplete="off"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </form>
+</div>

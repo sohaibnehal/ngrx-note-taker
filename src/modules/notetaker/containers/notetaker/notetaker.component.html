@@ -1,0 +1,18 @@
+<div>
+  <app-header></app-header>
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col col-12">
+        <app-add-note-form (addNote)="addNote($event)"></app-add-note-form>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col col-12">
+        <app-notes-list
+          [notes$]="notes$ | async"
+          (removeNote)="removeNote($event)"
+        ></app-notes-list>
+      </div>
+    </div>
+  </div>
+</div>

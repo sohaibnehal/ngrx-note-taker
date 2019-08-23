@@ -1,0 +1,11 @@
+<h2 class="mb-2">All Notes</h2>
+<div class="card mb-2" *ngFor="let item of notes$; let i = index">
+  <div class="card-header text-right">
+    <button class="btn btn-small btn-danger" (click)="onRemoveItem(i)">
+      x
+    </button>
+  </div>
+  <div class="card-body">
+    {{ item.note }}
+  </div>
+</div>
